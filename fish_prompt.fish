@@ -8,10 +8,14 @@ function fish_prompt
   set -l green (set_color -o green)
   set -l normal (set_color normal)
 
+  set -l ahead (_git_ahead)
+
   if test $last_status = 0
-    set status_indicator "$green✔︎ "
+    set initial_indicator "$green◆"
+    set status_indicator "$red❯$yellow❯$green❯"
   else
-    set status_indicator "$red✗ "
+    set initial_indicator "$red💥 $last_status"
+    set status_indicator "$red❯$red❯$red❯"
   end
   set -l cwd $cyan(basename (prompt_pwd))
 
@@ -36,5 +40,25 @@ function fish_prompt
     echo The last command took (math "$CMD_DURATION/1000") seconds.
   end
 
-  echo -n -s $status_indicator $cwd $git_info $normal ' '(set_color red)'❯'(set_color yellow)'❯'(set_color green)'❯ '
+  echo -n -s $initial_indicator' '$cwd $git_info $normal $ahead ' '$status_indicator' '
+end
+
+function _git_ahead -d 'Print a more verbose ahead/behind state for the current branch'
+  set -l commits (command git rev-list --left-right '@{upstream}...HEAD' ^/dev/null)
+  if [ $status != 0 ]
+    return
+  end
+  set -l behind (count (for arg in $commits; echo $arg; end | grep '^<'))
+  set -l ahead  (count (for arg in $commits; echo $arg; end | grep -v '^<'))
+  switch "$ahead $behind"
+    case ''     # no upstream
+    case '0 0'  # equal to upstream
+      return
+    case '* 0'  # ahead of upstream
+      echo (_col blue)"$ICON_ARROW_UP$ahead"
+    case '0 *'  # behind upstream
+      echo (_col red)"$ICON_ARROW_DOWN$behind"
+    case '*'    # diverged from upstream
+      echo (_col blue)"$ICON_ARROW_UP$ahead"(_col red)"$ICON_ARROW_DOWN$behind"
+  end
 end
