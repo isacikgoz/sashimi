@@ -1,14 +1,15 @@
+# name: sashimi
 function fish_prompt
   set -l last_status $status
   set -l cyan (set_color -o cyan)
   set -l yellow (set_color -o yellow)
-  set -l red (set_color -o red)
-  set -l blue (set_color -o blue)
+  set -g red (set_color -o red)
+  set -g blue (set_color -o blue)
   set -l green (set_color -o green)
-  set -l normal (set_color normal)
+  set -g normal (set_color normal)
 
   set -l ahead (_git_ahead)
-  set -l whitespace ' '
+  set -g whitespace ' '
 
   if test $last_status = 0
     set initial_indicator "$green◆"
@@ -45,9 +46,6 @@ end
 
 function _git_ahead
   set -l commits (command git rev-list --left-right '@{upstream}...HEAD' ^/dev/null)
-  set -l red_c (set_color -o red)
-  set -l blue_c (set_color -o blue)
-  set -l normal_c (set_color normal)
   if [ $status != 0 ]
     return
   end
@@ -58,11 +56,11 @@ function _git_ahead
     case '0 0'  # equal to upstream
       return
     case '* 0'  # ahead of upstream
-      echo "$blue_c↑$normal_c$ahead"
+      echo "$blue↑$normal_c$ahead$whitespace"
     case '0 *'  # behind upstream
-      echo "$red_c↓$normal_c$behind"
+      echo "$red↓$normal_c$behind$whitespace"
     case '*'    # diverged from upstream
-      echo "$blue_c↑$normal_c$ahead $red_c↓$normal_c$behind"
+      echo "$blue↑$normal$ahead $red↓$normal_c$behind$whitespace"
   end
 end
 
