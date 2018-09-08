@@ -6,3 +6,6 @@ A Prompt theme for fish shell.
 - simplistic (uses cwd instead of pwd)
 - git support (shows dirty status and ahead/behind info)
 - shows error returns along with painting the prompt to red
+
+### Preview
+![screenshot](images/preview.png)
