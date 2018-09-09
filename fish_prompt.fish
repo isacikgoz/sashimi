@@ -13,7 +13,7 @@ function fish_prompt
 
   if test $last_status = 0
     set initial_indicator "$green◆"
-    set status_indicator "$yellow❯$normal❯$green❯"
+    set status_indicator "$normal❯$cyan❯$green❯"
   else
     set initial_indicator "$red✖ $last_status"
     set status_indicator "$red❯$red❯$red❯"
