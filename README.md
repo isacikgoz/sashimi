@@ -19,11 +19,11 @@ if you have [oh my fish](https://github.com/oh-my-fish/oh-my-fish) framework, yo
 ```bash
 omf install sashimi
 ```
-or you can clone this repository and:
+or you can manually:
 ```bash
 git clone https://github.com/isacikgoz/sashimi.git
 cd sashimi
-ln -s fish_prompt.fish ~/.config/fish/fuctions/fish_prompt.fish
+ln -s fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
 ```
 
 ### Preview
