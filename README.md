@@ -2,10 +2,17 @@
 
 A Prompt theme for fish shell.
 
+[![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
+
 ### Features
-- simplistic (uses cwd instead of pwd)
-- git support (shows dirty status and ahead/behind info)
-- shows error returns along with painting the prompt to red
+- sleek
+  - prints only the parent instead of pwd
+- git support
+  - shows dirty status
+  - ahead/behind info
+  - discourages to work on master branch
+- informative when required
+  - shows error returns along with painting the prompt to red
 
 ### Preview
 ![screenshot](images/preview.png)
