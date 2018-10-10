@@ -5,21 +5,21 @@ A Prompt theme for fish shell.
 [![Oh My Fish](https://img.shields.io/badge/Framework-Oh_My_Fish-blue.svg)](https://github.com/oh-my-fish/oh-my-fish) [![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
 ### Features
-- sleek
-  - prints only the parent instead of pwd
-- git support
-  - shows dirty status
-  - ahead/behind info
-  - discourages to work on master branch
-- informative when required
+- Sleek
+  - displays only the parent dir instead of the whole working dir
+- Git Support
+  - shows clean/dirty status
+  - shows branch ahead/behind info
+  - discourages working on master branch
+- Informative When Required
   - shows error returns along with painting the prompt to red
 
 ### Install
-if you have [oh my fish](https://github.com/oh-my-fish/oh-my-fish) framework, you can simply:
+if you have [oh my fish](https://github.com/oh-my-fish/oh-my-fish) framework, you can simply run:
 ```bash
 omf install sashimi
 ```
-or you can manually:
+or manually:
 ```bash
 git clone https://github.com/isacikgoz/sashimi.git
 cd sashimi
