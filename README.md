@@ -5,6 +5,7 @@ A Prompt theme for fish shell.
 [![Oh My Fish](https://img.shields.io/badge/Framework-Oh_My_Fish-blue.svg)](https://github.com/oh-my-fish/oh-my-fish) [![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
 ### Features
+- Compatible with Fish 3.0
 - Sleek
   - displays only the parent dir instead of the whole working dir
 - Git Support
