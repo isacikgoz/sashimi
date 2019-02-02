@@ -16,16 +16,20 @@ A Prompt theme for fish shell.
   - shows error returns along with painting the prompt to red
 
 ### Install
-if you have [oh my fish](https://github.com/oh-my-fish/oh-my-fish) framework, you can simply run:
-```bash
-omf install sashimi
-```
-or manually:
-```bash
-git clone https://github.com/isacikgoz/sashimi.git
-cd sashimi
-ln -s fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
-```
+* if you have [oh my fish](https://github.com/oh-my-fish/oh-my-fish) framework, you can simply run:
+  ```shell
+  omf install sashimi
+  ```
+* if you prefer [Fisher](https://github.com/jorgebucaran/fisher):
+  ```shell
+  fisher add isacikgoz/sashimi
+  ```
+* or manually:
+  ```shell
+  git clone https://github.com/isacikgoz/sashimi.git
+  cd sashimi
+  ln -s fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
+  ```
 
 ### Preview
 ![screenshot](images/preview.png)
