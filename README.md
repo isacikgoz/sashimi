@@ -4,6 +4,12 @@ A Prompt theme for fish shell.
 
 [![Oh My Fish](https://img.shields.io/badge/Framework-Oh_My_Fish-blue.svg)](https://github.com/oh-my-fish/oh-my-fish) [![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
+### Preview
+
+<p align="center">
+   <img src="https://github.com/isacikgoz/sashimi/blob/master/images/preview.png" alt="screenshot"/>
+</p>
+
 ### Features
 - Compatible with Fish 3.0
 - Sleek
@@ -30,9 +36,6 @@ A Prompt theme for fish shell.
   cd sashimi
   ln -s fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
   ```
-
-### Preview
-![screenshot](images/preview.png)
 
 ### Credits
 This prompt is inspired from some popular themes such as:
