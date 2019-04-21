@@ -5,6 +5,8 @@
 
 A minimal [fish shell](https://github.com/fish-shell/fish-shell) prompt made of raw fish.
 
+Sashimi uses your prompt real estate as low as possible. It focuses on only required information. Along with being minimalist, the error codes are shown to user so that you can start to debug from a better point. See the features list for more detailed information.
+
 <p align="center">
    <img src="images/preview.png" alt="screenshot"/>
 </p>
