@@ -2,7 +2,7 @@
 
 A Prompt theme for fish shell.
 
-[![Oh My Fish](https://img.shields.io/badge/Framework-Oh_My_Fish-blue.svg)](https://github.com/oh-my-fish/oh-my-fish) [![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
+[![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
 ### Preview
 
@@ -22,19 +22,22 @@ A Prompt theme for fish shell.
   - shows error returns along with painting the prompt to red
 
 ### Install
-* if you have [oh my fish](https://github.com/oh-my-fish/oh-my-fish) framework, you can simply run:
-  ```shell
-  omf install sashimi
-  ```
-* if you prefer [Fisher](https://github.com/jorgebucaran/fisher):
-  ```shell
-  fisher add isacikgoz/sashimi
-  ```
-* or manually:
+You can install sashimi with simply cloning the repo and link to fish prompt file.
   ```shell
   git clone https://github.com/isacikgoz/sashimi.git
   cd sashimi
   ln -s fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
+  ```
+  
+  However, I recommend installing it via a fish shell pacakge manager;
+  
+* If you are using [Fisher](https://github.com/jorgebucaran/fisher):
+  ```shell
+  fisher add isacikgoz/sashimi
+  ```
+* Or, if you prefer [oh my fish](https://github.com/oh-my-fish/oh-my-fish):
+  ```shell
+  omf install sashimi
   ```
 
 ### Credits
