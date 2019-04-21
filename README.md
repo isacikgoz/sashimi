@@ -1,47 +1,55 @@
-## Sashimi
+# Sashimi
 
-A Prompt theme for fish shell.
+[![Releases](https://img.shields.io/github/release/isacikgoz/sashimi.svg?label=latest)](https://github.com/isacikgoz/sashimi/releases)
+[![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 
-[![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
-
-### Preview
+A minimal [fish shell](https://github.com/fish-shell/fish-shell) prompt made of raw fish.
 
 <p align="center">
-   <img src="https://github.com/isacikgoz/sashimi/blob/master/images/preview.png" alt="screenshot"/>
+   <img src="images/preview.png" alt="screenshot"/>
 </p>
 
-### Features
-- Compatible with Fish 3.0
-- Sleek
-  - displays only the parent dir instead of the whole working dir
-- Git Support
-  - shows clean/dirty status
-  - shows branch ahead/behind info
-  - discourages working on master branch
-- Informative When Required
-  - shows error returns along with painting the prompt to red
+## Features
 
-### Install
-You can install sashimi with simply cloning the repo and link to fish prompt file.
-  ```shell
-  git clone https://github.com/isacikgoz/sashimi.git
-  cd sashimi
-  ln -s fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
-  ```
-  
-  However, I recommend installing it via a fish shell pacakge manager;
-  
-* If you are using [Fisher](https://github.com/jorgebucaran/fisher):
+- Compatible with fish 3.0+
+- Sleek
+  - Displays only the parent directory instead of the entire working directory
+- Git Support
+  - Shows clean/dirty status
+  - Shows branch ahead/behind information
+  - Discourages working on master branch
+- Informative When Required
+  - Shows error exit status in red
+
+### Installation
+
+You can install sashimi by cloning this repository and linking the `fish_prompt.fish` file to your `~/.config/fish/functions` directory or any directory in your fish functions path.
+
+```shell
+git clone https://github.com/isacikgoz/sashimi
+cd sashimi
+ln -s fish_prompt.fish ~/.config/fish/functions/fish_prompt.fish
+```
+
+If you are using a package manager, you have the following options:
+
+- Using [Fisher](https://github.com/jorgebucaran/fisher):
   ```shell
   fisher add isacikgoz/sashimi
   ```
-* Or, if you prefer [oh my fish](https://github.com/oh-my-fish/oh-my-fish):
+- Or, if you prefer [Oh My Fish!](https://github.com/oh-my-fish/oh-my-fish):
   ```shell
   omf install sashimi
   ```
 
-### Credits
-This prompt is inspired from some popular themes such as:
+## Credits
+
+This prompt was inspired by other promps such as:
+
 - [robbyrussell](https://github.com/robbyrussell/oh-my-zsh/blob/master/themes/robbyrussell.zsh-theme)
 - [sorin](https://github.com/fish-shell/fish-shell/tree/master/share/tools/web_config/sample_prompts)
 - [bobthefish](https://github.com/oh-my-fish/theme-bobthefish)
+
+## License
+
+[MIT](LICENSE)
