@@ -45,7 +45,7 @@ function fish_prompt
 end
 
 function _git_ahead
-  set -l commits (command git rev-list --left-right '@{upstream}...HEAD' ^/dev/null)
+  set -l commits (command git rev-list --left-right '@{upstream}...HEAD' 2>/dev/null)
   if [ $status != 0 ]
     return
   end
@@ -65,10 +65,10 @@ function _git_ahead
 end
 
 function _git_branch_name
-  echo (command git symbolic-ref HEAD ^/dev/null | sed -e 's|^refs/heads/||')
+  echo (command git symbolic-ref HEAD 2>/dev/null | sed -e 's|^refs/heads/||')
 end
 
 function _is_git_dirty
-  echo (command git status -s --ignore-submodules=dirty ^/dev/null)
+  echo (command git status -s --ignore-submodules=dirty 2>/dev/null)
 end
 
